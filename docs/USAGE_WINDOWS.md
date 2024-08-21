@@ -1,3 +1,20 @@
+# How to install Python 3.9 via Microsoft Store
+
+1. Open the Microsoft Store app on your Windows 10/11 device. You can search for it in the Start menu or press the Windows logo key + S and type "store".
+2. In the Microsoft Store app, search for "Python 3.9" or click on this link: [Python 3.9].
+3. On the Python 3.9 app page, click on the "Get" button to download and install it. You may need to sign in with your Microsoft account if you haven't already.
+4. Once the installation is complete, you can launch Python 3.9 from the Start menu or by typing "python" in the command prompt.
+5. To verify that Python 3.9 is installed correctly, you can run the following command in the command prompt: `python --version`. It should display something like "Python 3.9.0".
+6. Congratulations, you have successfully installed Python 3.9 via Microsoft Store. You can now use it to create and run Python scripts, modules, and applications. 🐍
+
+# How to install Visual Studio Code via Microsoft Store
+
+1. Open the Microsoft Store app on your Windows 10/11 device. You can search for it in the Start menu or press the Windows logo key + S and type "store".
+2. In the Microsoft Store app, search for "Visual Studio Code" or click on this link: [Visual Studio Code](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=en-US&gl=US).
+3. On the Visual Studio Code app page, click on the "Get" button to download and install it. You may need to sign in with your Microsoft account if you haven't already.
+4. Once the installation is complete, you can launch Visual Studio Code from the Start menu.
+5. Congratulations, you have successfully installed Visual Studio Code via Microsoft Store. You can now use it to edit and debug code in various languages and frameworks. 💻
+
 # How to install OpenVoice from GitHub using Visual Studio Code terminal
 
 1. Launch Visual Studio Code and open a folder where you want to store the openvoice project. You can use the File > Open Folder menu command.
