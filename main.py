@@ -19,7 +19,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Obtain reference speaker or the voice you want to clone
 # Then obtain the tone color embedding
-reference_speaker = 'resources/example_reference.mp3' # This is the voice you want to clone
+reference_speaker = 'resources/5 wild new AI tools you can try right now - Fireship (youtube).mp3' # This is the voice you want to clone
 target_se, audio_name = se_extractor.get_se(reference_speaker, tone_color_converter, vad=False)
 
 ##############################################################
@@ -27,15 +27,21 @@ target_se, audio_name = se_extractor.get_se(reference_speaker, tone_color_conver
 # Use MeloTTS as base speaker model
 from melo.api import TTS
 
-texts = {
-    'EN_NEWEST': "Did you ever hear a folk tale about a giant turtle?",  # The newest English base speaker model
-    'EN': "Did you ever hear a folk tale about a giant turtle?",
-    'ES': "El resplandor del sol acaricia las olas, pintando el cielo con una paleta deslumbrante.",
-    'FR': "La lueur dorée du soleil caresse les vagues, peignant le ciel d'une palette éblouissante.",
-    'ZH': "在这次vacation中，我们计划去Paris欣赏埃菲尔铁塔和卢浮宫的美景。",
-    'JP': "彼は毎朝ジョギングをして体を健康に保っています。",
-    'KR': "안녕하세요! 오늘은 날씨가 정말 좋네요.",
+# Path to txt files
+text_files = {
+    'EN_NEWEST': "resources/texts/en.txt",  # The newest English base speaker model
+    # 'EN': "resources/texts/en.txt",  # English
+    # 'ES': "resources/texts/es.txt",  # Spanish
+    # 'FR': "resources/texts/fr.txt",  # French
 }
+
+# Function to read the text from a file
+def read_text_from_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return file.read()
+
+# Read the texts from the files
+texts = {language: read_text_from_file(file_path) for language, file_path in text_files.items()}
 
 src_path = f'{output_dir}/tmp.wav'
 
